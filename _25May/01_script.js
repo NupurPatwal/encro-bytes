@@ -9,20 +9,24 @@ Score < 60: Grade F
 const score=prompt("Enter the Student's Score");
 if (score >=90) {
     console.log("Grade A");
-    // prompt("The Grade  is A");
+    alert("Grade A");
 } else if (score >=80) {
     console.log("Grade B");
-    // prompt("The Grade  is B");
+    alert("Grade B");
+
 }
  else if (score >=70) {
     console.log("Grade C");
-    // prompt("The Grade  is C");
+    alert("Grade C");
+
 }
 else if (score >=60) {
     console.log("Grade D");
-    // prompt("The Grade  is D");
+    alert("Grade D");
+
 }
 else{
     console.log("Grade F");
-    // prompt("The Grade  is F");
+    alert("Grade F");
+
 }

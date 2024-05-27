@@ -5,10 +5,14 @@ Number Sign Checker */
 const year=prompt("Enter the year");
 if (year % 4 == 0) {
     console.log("LEAP YEAR");
+    alert(" LEAP YEAR");
 }else if(year %100==0){
     console.log("NORMAL YEAR");
+    alert("NORMAL YEAR");
 }else if(year % 400==0){
     console.log("LEAP YEAR");
+    alert(" LEAP YEAR");
 }else{
     console.log("NORMAL YEAR");
+    alert(" NORMAL YEAR");
 }
