@@ -28,5 +28,4 @@ else if (score >=60) {
 else{
     console.log("Grade F");
     alert("Grade F");
-
 }
