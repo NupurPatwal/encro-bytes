@@ -1,0 +1,76 @@
+1. for loop :                                                  
+
+for (initialization; condition; increment) {
+    // code to be executed
+}
+
+Example: 
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+2. While Loop:
+while (condition) {
+    // code to be executed
+}
+ Example:
+ let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+
+3. Do- While loop:
+do {
+    // code to be executed
+} while (condition);
+ 
+ Example:
+ let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 10);
+ 
+ 4. For   in Loop:
+ 
+for (variable in object) {
+    // code to be executed
+}
+
+Example: 
+const person = {fname: "John", lname: "Doe", age: 25};
+
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+
+5.For Of loop:
+for (variable of iterable) {
+    // code to be executed
+}
+
+Example:
+const array = [1, 2, 3, 4, 5];
+
+for (let value of array) {
+    console.log(value);
+}
+
+6. Break AND Continue:
+Example: 
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // exit the loop
+    }
+    console.log(i);
+}
+
+   for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // skip the current iteration
+    }
+    console.log(i);
+}
+
+
