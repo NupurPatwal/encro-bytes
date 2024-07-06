@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create and Read</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter the task" id="task-inp" />
+    <button id="task-add">Submit</button>
+    <div id="task-list"></div>
+    <script>
+      let taskInput = document.getElementById("task-inp");
+      let btn = document.getElementById("task-add");
+      let taskShow = document.getElementById("task-list");
+      let empArr = [];
+
+      //   CREATE:
+      btn.addEventListener("click", () => {
+        empArr.push(taskInput.value);
+        displayArr(empArr);
+      });
+
+      // READ:
+      function displayArr(empArr) {
+        taskShow.innerHTML = "";
+        for (let i = 0; i < empArr.length; i++) {
+          taskShow.innerHTML += `<li>${empArr[i]}</li>`;
+        }
+      }
+    </script>
+  </body>
+</html>

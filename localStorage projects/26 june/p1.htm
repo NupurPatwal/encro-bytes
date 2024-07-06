@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practise 1</title>
+  </head>
+  <body>
+    <h1 id="head">Adding Two Numbers...</h1>
+    <input
+      type="number"
+      placeholder="Enter the first number..."
+      id="first-num" />
+    <input type="number" placeholder="Enter the second num..." id="sec-num" />
+    <button type="button" id="btn">Submitt!</button>
+    <script>
+      let heading = document.getElementById("head");
+      let firstNum = document.getElementById("first-num");
+      let secNum = document.getElementById("sec-num");
+      let button = document.getElementById("btn");
+
+      button.addEventListener("click", function () {
+        heading.innerHTML = Number(firstNum.value) + Number(secNum.value);
+      });
+    </script>
+  </body>
+</html>

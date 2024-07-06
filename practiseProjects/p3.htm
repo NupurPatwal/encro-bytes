@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter the task" id="task-inp" />
+    <button type="button" id="btn">Submit !</button>
+    <ul id="taskList"></ul>
+  </body>
+  <script>
+    let inputText = document.getElementById("task-inp");
+    let btn = document.getElementById("btn");
+    let taskList = document.getElementById("taskList");
+    let empArr = [];
+
+    // CREATE:
+    // ----------------------- 1 -----------------------------------
+
+    btn.addEventListener("click", () => {
+      empArr.push(inputText.value);
+      //   call a function
+    });
+
+    // READ:
+    // ----------------------- 2 -----------------------------------
+
+    function displayArr(arr) {
+      taskList.innerHTML = "";
+      for (let i = 0; i < arr.length; i++) {
+        taskList.innerHTML += `<div>
+          <li>${arr[i]}</li>`;
+      }
+    }
+
+    // UPDATE:
+    // ----------------------- 3 -----------------------------------
+    let updateTodo = (i) => {
+      let updatedValue = prompt("Enter the value....");
+    };
+  </script>
+</html>

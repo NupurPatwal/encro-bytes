@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREATE And READ</title>
+  </head>
+  <body>
+    <section>This is a form</section>
+    <form action="action" style="line-height: 1.8em">
+      Name:
+      <input type="text" placeholder="Enter your name" id="your-name" />
+      <br />
+      Age:
+      <input
+        type="number"
+        name="age"
+        id="your-age"
+        placeholder="Enter your age" />
+      <br />
+      <button type="button" id="btn">Click Me!</button>
+      <div id="output"></div>
+    </form>
+    <script>
+      let fullName = document.getElementById("your-name");
+      let userAge = document.getElementById("your-age");
+      let btn = document.getElementById("btn");
+      let outPut = document.getElementById("output");
+      let empArr = [];
+      //   CREATE:
+      btn.addEventListener("click", () => {
+        empArr.push(fullName.value);
+        empArr.push(userAge.value);
+        // empArr.push(userAge.value);
+        displayArr(empArr);
+      });
+      //    READ:
+      function displayArr(empArr) {
+        outPut.innerHTML = "";
+        for (let i = 0; i < empArr.length; i++) {
+          outPut.innerHTML += `<div> ${empArr[i]}</div>`;
+        }
+      }
+    </script>
+  </body>
+</html>

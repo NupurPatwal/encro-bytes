@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>To do Dobara</h1>
+    <input type="text" placeholder="Enter the value..." id="textinput" />
+    <button id="btn">Submit !</button>
+    <div id="valueStore"></div>
+
+    <script>
+      let textInput = document.getElementById("textinput");
+      let btn = document.getElementById("btn");
+      let valueStore = document.getElementById("valueStore");
+      let empArr = [];
+      //    CREATE:
+      btn.addEventListener("click", function () {
+        // pushing the value of input to array:
+        empArr.push(textInput.value);
+        // ab array k function create krege or phir usse call krege
+        arrFun(empArr);
+      });
+
+      //   READ:
+      function arrFun(arr) {
+        valueStore.innerHTML = "";
+        for (let i = 0; i < arr.length; i++) {
+          valueStore.innerHTML += `<li>${arr[i]}</li>`;
+        }
+      }
+    </script>
+  </body>
+</html>

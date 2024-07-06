@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-to-r from-blue-200 to-green-200 p-4">
+    <h1 class="text-3xl font-bold mb-4">Mai Hun ek Blog</h1>
+    <div class="flex flex-col mb-4" id="category">
+        <label for="category" class="mb-2 font-bold">Category:</label>
+        <input type="text" name="category" id="categoryVal" placeholder="Enter the Category"
+            class="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500 w-40">
+    </div>
+    <div class="flex flex-col mb-4" id="title">
+        <label for="title" class="mb-2 font-bold">Title:</label>
+        <input type="text" id="titleVal" placeholder="What's the title"
+            class="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500">
+    </div>
+    <div class="flex flex-col mb-4">
+        <label for="description" class="mb-2 font-bold">Description:</label>
+        <input type="text" id="description" placeholder="Lorem ipsum dolor sit."
+            class="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500">
+    </div>
+    <button type="button" id="btn"
+        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+        Enter the button!
+    </button>
+    <div class="flex flex-col mt-4">
+        <label for="merger" class="mb-2 font-bold">Merger:</label>
+        <div id="contentBox" name="merger" class="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500
+            bg-pink-200 text-xl"></div>
+    </div>
+    <script src="./p1.js"></script>
+</body>
+
+</html>

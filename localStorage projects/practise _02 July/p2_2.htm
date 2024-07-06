@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO teebara</title>
+  </head>
+  <body>
+    <h1>This is a todo.</h1>
+    <input type="text" id="textinp" />
+    <button id="btn">Submitt</button>
+    <div id="valStore"></div>
+
+    <script>
+      let textInput = document.getElementById("textinp");
+      let button = document.getElementById("btn");
+      let valueStore = document.getElementById("valStore");
+      let empArr = [];
+
+      //   CREATE:
+      button.addEventListener("click", () => {
+        empArr.push(textInput.value);
+        callingArr(empArr);
+      });
+
+      // READ:
+      function callingArr(empArr) {
+        valueStore.innerHTML = "";
+        for (let i = 0; i < empArr.length; i++) {
+          valueStore.innerHTML += `<li>${empArr[i]}</li>`;
+        }
+      }
+    </script>
+  </body>
+</html>

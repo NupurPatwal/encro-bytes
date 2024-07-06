@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple to do CR</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter the task...." id="task-inp" />
+    <input type="text" placeholder="Have to done by...." id="doer-name" />
+    <button id="btn">Press to submit !</button>
+    <div id="task-list"></div>
+    <script>
+      let taskInput = document.getElementById("task-inp");
+      let userName = document.getElementById("doer-name");
+      let btn = document.getElementById("btn");
+      let taskList = document.getElementById("task-list");
+      let empArr = [];
+
+      //    CREATE:
+      btn.addEventListener("click", () => {
+        empArr.push(taskInput.value, userName.value);
+        //  calling the function:
+        displayItem(empArr);
+      });
+
+      function displayItem(empArr) {
+        taskList.innerHTML = "";
+        for (let i = 0; i < empArr.length; i++) {
+          taskList.innerHTML = `<li>The ${taskInput.value} task is done by ${empArr[i]}</li>`;
+          //   console.log("/n");
+        }
+      }
+    </script>
+  </body>
+</html>

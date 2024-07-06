@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo part1</title>
+  </head>
+  <body>
+    <h1>This is To- do part 1</h1>
+    <input type="text" id="textinput" placeholder="Enter the task..." />
+    <button id="btn">Submit !</button>
+    <div id="show"></div>
+  </body>
+  <script>
+    let textinput = document.getElementById("textinput");
+    let button = document.getElementById("btn");
+    let taskShow = document.getElementById("taskShow");
+    let taskArr = [];
+
+    //  create:
+    button.addEventListener("click", function () {
+      taskArr.push(textinput.value);
+      displayArr(taskArr);
+    });
+
+    // READ:
+    //  call krege function ko:
+    function displayArr(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        taskShow.innerHTML += `${arr[i]}`;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,208 @@
+let taskInput = document.getelementbyId("Input") // input 
+let taskList = document.getelementbyId("taskList") // empty div
+let button = document.button.getelementbyId("button") // button toclick
+
+
+// initialising an array.
+let taskArr = []
+
+
+window.addEventListener("load", () => {
+  taskArr = JSON.parse(localStorage.getItem("datasaved"));
+  displayArr(taskArr)
+}); 
+
+window.addeventListener("load", function()=>{
+    taskArr = JSON.parse(localStorage.getItem("datasaved))
+    displayArr(taskArr)
+})
+
+window.addeventListener("load",function()=>{
+    JSON.parse(localStorage.getItem("datasaved"));
+    displayArr(taskArr)
+})
+
+window.addEventListener("load", function(){
+    taskArr=JSON.parse(localStorage.getItem("datasaved))
+
+})
+
+
+// CREATE:
+//one:
+addButton.addEventListener("click", function () {
+  const newTask = todoInput.value.trim();
+  if (newTask !== "") {
+    taskArr.push(newTask);
+    localStorage.setItem("dataSaved", JSON.stringify(taskArr));
+
+    displayArr(taskArr);
+    todoInput.value = "";
+  } else {
+    alert(`Type something.`);
+  }
+});
+
+
+//two:
+
+button.addEventListener("click",()=>{
+    const newTask = taskInput.value.trim();
+    if(newTask!==""){
+      taskArr.push(newTask);
+      localStorage.setItem("dataSaved", JSON.stringify(taskArr));
+    }
+    else{
+        alert(`Type something)
+    }
+})
+
+button.addEventListener("click", ()=>{
+    const newTask = taskInput.value.trim();
+    if(newTask!==""){
+        taskArr.push(newTask);
+        localStorage.setItem("dataSaved", JSON.stringify(taskArr))
+        displayArr(taskArr)
+    }
+    else{
+        alert("type kr bhai...")
+    }
+})
+
+ //create:
+ button.addEventListener("click", ()=>{
+    const newTask = taskInput.value.trim()
+    if(newTask !==""){
+        taskArr.push(newTask)
+        localStorage.setItem("localStorage", JSON.stringify(taskArr));
+        displayArr(taskArr)
+    }
+    else{
+        alert("type kr bhai")
+    }
+ })
+
+ //calling function code:
+
+function displayArr(taskArr) {
+ taskList.innerHTML = "";
+  for (let i = 0; i < taskArr.length; i++) {
+    taskList.innerHTML += `<span>${i + 1} ${taskArr[i]} </span>
+    <div>
+          <button onclick="updateItem(${i})">
+            Update
+          </button>
+          <button onclick="deleteItem(${i})">
+            Delete
+          </button>
+        </div>`;
+  }
+}
+
+function displayArr(taskArr){
+    taskList.innerHTML = ""
+    for(let i; i< taskArr.length ; i++){
+        taskList.innerHTML +=`<div>taskArr[i]</div>
+        <button onclick = "updateItem(${i})">
+        Update
+        </button>
+        <button onclick = "deleteItem(${i})>
+        Delete
+        </button>
+        `
+    }
+}
+
+
+//update:
+function updateItem (i){
+    let updateValue = prompt(`Enter the value...`);
+    taskArr.splice(i,1,updateValue);
+    localStorage.setItem("dataSaved",JSON.stringify(taskArr));
+    displayArr(taskArr);
+}
+
+function updateItem(i{
+    let updateValue = prompt(`enter the value..`)
+    taskArr.splice(i,1,updateValue;)
+    localStorage.setItem("dataSaved", JSON.stringify(taskArr));
+})
+
+function deleteItem(i){
+    let deletedValue = prompt(`enter the deleted value...)
+    const confirmDelete = confirm("Did you want to delete...")
+    if(confirmDelete){
+        taskArr.splice(index,1);
+        localStorage.setItem("dataSaved",JSON.stringify(taskArr))
+        displayArr(taskArr)
+    }
+}
+function deleteItem(i){
+    let deletedValue = prompt(`enter the delete value...`)
+    const confirmDelete = confirm(`Did you want to delete..`)
+    if(confirmDelete == true){
+        taskArr.splice(i,1);
+        localStorage.setItem("dataSaved",JSON.stringify(taskArr))
+        displayArr(taskArr)
+    }
+}
+
+
+
+//final:
+const taskInput = document.getelementbyId("task-inp");
+const taskList = document.getelementbyId("task-list");
+const button = document.getelementbyId("button)
+
+//initialising the array:
+
+let taskArr = [];
+
+
+//window loading:
+window.addEventListener("load", ()=>{
+taskArr = JSON.parse(localStorage.setItem("dataSaved"));
+displayArr(taskArr);
+})
+
+//CREATE:
+
+button.addEventListener("click",()=>{
+
+    const newTask = taskInput.value.trim();
+    if(newTask !== ""){
+    taskArr.push(newTask)
+    localStorage.getItem("dataSaved",JSON.stringify(taskArr))
+    }
+})
+
+// READ:
+
+function displayArr(taskArr){
+    taskList.innerHTML ="";
+    for(let i= 0; i< taskArr ; i++){
+        taskList.innerHTML +=`<span> ${taskArr[i]} </span>
+               <button onclick="updateItem">Update</button>
+               <button onclick="DeleteIteupdateItem">delete</button>
+                 `
+    }
+}
+
+// UPDATE:
+
+function updateItem(i){
+    let updateValue = prompt(`Did you want to update...`)
+    taskArr.splice(i,1,updateValue);
+    localStorage.getItem("dataSaved",JSON.stringify(taskArr));
+    displayArr(taskArr)
+}
+
+function deleteItem (i){
+    let deletedValue = confirm(kjbwdbjq){
+        if(deletedValue){
+            taskArr.splice(i,1);
+            localStorage.setItem("dataSaved",JSON.stringify(taskArr))
+            displayArr(taskArr)
+        }
+    }
+}
